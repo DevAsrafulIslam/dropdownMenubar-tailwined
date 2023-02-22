@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dropdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body class="border-b-2">
+    <nav
+      class="container mx-auto p-5 bg-slate-400 bg-opacity-80 md:flex md:items-center md:justify-between"
+    >
+      <div class="flex justify-between items-center">
+        <a class="text-3xl fone-[Popp] cursor-pointer" href=""
+          ><img src="images/duet-logo.png" class="h-20 w-20" alt=""
+        /></a>
+        <span class="text-4xl cursor-pointer md:hidden mx-2 block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+      <ul
+        class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-0 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400] transition-all duration-500"
+      >
+        <li
+          class="flex justify-between mx-4 my-6 md:my-0 border-b-2 md:border-b-0"
+        >
+          <a class="text-[18px] px-2 text-[#009f51] duration-500" href="#"
+            >Home</a
+          >
+          <ion-icon
+            class="px-2 text-[#009f51] md:hidden"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </li>
+        <li
+          class="flex justify-between mx-4 my-6 md:my-0 border-b-2 md:border-b-0"
+        >
+          <a class="text-[18px] px-2 text-[#009f51] duration-500" href="#"
+            >About DUET</a
+          >
+          <ion-icon
+            class="px-2 text-[#009f51] md:hidden"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </li>
+        <li
+          class="flex justify-between mx-4 my-6 md:my-0 border-b-2 md:border-b-0"
+        >
+          <a class="text-[18px] px-2 text-[#009f51] duration-500" href="#"
+            >Notices</a
+          >
+          <ion-icon
+            class="px-2 text-[#009f51] md:hidden"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </li>
+        <li
+          class="flex justify-between mx-4 my-6 md:my-0 border-b-2 md:border-b-0"
+        >
+          <a class="text-[18px] px-2 text-[#009f51] duration-500" href="#"
+            >Academic</a
+          >
+          <ion-icon
+            class="px-2 text-[#009f51] md:hidden"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </li>
+        <li
+          class="flex justify-between mx-4 my-6 md:my-0 border-b-2 md:border-b-0"
+        >
+          <a class="text-[18px] px-2 text-[#009f51] duration-500" href="#"
+            >Office & Addministration</a
+          >
+          <ion-icon
+            class="px-2 text-[#009f51] md:hidden"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </li>
+        <li
+          class="flex justify-between mx-4 my-6 md:my-0 border-b-2 md:border-b-0"
+        >
+          <a class="text-[18px] px-2 text-[#009f51] duration-500" href="#"
+            >Publication</a
+          >
+          <ion-icon
+            class="px-2 text-[#009f51] md:hidden"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </li>
+        <li
+          class="flex justify-between mx-4 my-6 md:my-0 border-b-2 md:border-b-0"
+        >
+          <a class="text-[18px] px-2 text-[#009f51] duration-500" href="#"
+            >Online Service</a
+          >
+          <ion-icon
+            class="px-2 text-[#009f51] md:hidden"
+            name="chevron-down-outline"
+          ></ion-icon>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function Menu(e) {
+        let list = document.querySelector("ul");
+        e.name === "menu"
+          ? ((e.name = "close"),
+            list.classList.add("top-[120px]"),
+            list.classList.add("opacity-100"))
+          : ((e.name = "menu"),
+            list.classList.remove("top-[80px]"),
+            list.classList.remove("opacity-100"));
+      }
+    </script>
+  </body>
+</html>
